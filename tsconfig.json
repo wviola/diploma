@@ -11,6 +11,7 @@
   "include": [
     "tests",
     "data",
-    "utils"
+    "utils",
+    "src/models/jsonplaceholder.api.ts"
   ]
 }

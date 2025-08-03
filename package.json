@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:api": "jest tests/api",
+    "test:unit": "jest tests/unit",
+    "test:": "jest tests/"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +15,10 @@
   "type": "commonjs",
   "devDependencies": {
     "@types/jest": "^30.0.0",
+    "@types/superagent": "^8.1.9",
+    "dotenv": "^17.2.1",
     "jest": "^30.0.5",
+    "superagent": "^10.2.3",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
