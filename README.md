@@ -10,7 +10,6 @@
 ![Allure](https://img.shields.io/badge/Report-Allure-blue)  
 
 Этот проект содержит автотесты, разработанные с использованием:
-
 **Playwright (TS)** для проверки функциональности интернет-портала [Интернет-портал Onliner](https://www.onliner.by/), **Jest + superAgent(TS)** для тестирования интернет-страницы [Интернет-страница](https://jsonplaceholder.typicode.com/) и **Jest** для проверки функциональности класса 'Регистрационная форма'
 
 ---
