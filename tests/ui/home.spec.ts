@@ -33,7 +33,7 @@ test.describe('Onliner ui elements tests', () => {
     });
 });
 
-test.describe.only('Onliner navigation tests', () => {
+test.describe('Onliner navigation tests', () => {
     let pages: PageFactory;
 
     test.beforeEach(async ({ page }: { page: Page }) => {

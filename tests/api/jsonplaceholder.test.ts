@@ -41,7 +41,6 @@ describe('JSONPlaceholder API GET Tests', () => {
 
     test('GET /posts/{id} - Should return a single post by ID', async () => {
 
-        console.log(createdPostId)
         const response = await api
             .get(endpoints.jsonplaceholder.postById(createdPostId));
 
@@ -54,7 +53,6 @@ describe('JSONPlaceholder API GET Tests', () => {
 
     test('GET /posts/{id}/comments - Should return comments for a specific post', async () => {
 
-        console.log(createdPostId)
         const response = await api
             .get(endpoints.jsonplaceholder.postComments(createdPostId));
 
@@ -361,3 +359,4 @@ describe('JSONPlaceholder API PUT Tests', () => {
         });
     });
 });
+
