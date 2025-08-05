@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:api": "jest tests/api",
-    "test:unit": "jest tests/unit",
+    "test:unit": "jest src/unit",
     "test:ui": "npx playwright test",
     "clean:results": "rm -rf allure-results",
     "clean:report": "rm -rf allure-report",
