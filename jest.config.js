@@ -7,6 +7,6 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: "node",
   preset: 'ts-jest',
-  testMatch: ['**/tests/**/*.test.ts'],
+  testMatch: ['**/tests/**/*.test.ts', '**/src/**/*.test.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 };
