@@ -5,7 +5,7 @@ import {
     postWithoutBody, stringUserId, stringId,
     negativeId, postWithExtraField, partialTitle,
     partialBody, patchTodoData
-} from '../../fixtures//jsonplaceholder-data';
+} from '../../fixtures/jsonplaceholderData';
 import superagent from 'superagent';
 
 let createdPostId: number;
