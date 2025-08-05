@@ -6,7 +6,6 @@ import {
     negativeId, postWithExtraField, partialTitle,
     partialBody, patchTodoData
 } from '../../fixtures/jsonplaceholderData';
-import superagent from 'superagent';
 
 let createdPostId: number;
 let createdTodoId: number;
