@@ -1,2 +1,13 @@
+#project
 .env
 node_modules
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+#allure
+allure-report
+allure-results
