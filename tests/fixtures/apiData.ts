@@ -1,57 +1,49 @@
-export interface Post {
+export interface PostData {
     userId: number;
     id?: number;
     title: string;
     body?: string;
 }
 
-export interface Todo {
+export interface TodoRequestData {
     userId: number;
     id?: number;
     title: string;
     completed: boolean;
 }
 
-export interface PostID {
+export interface PostDataID {
     userId: string;
     id?: number;
     title: string;
     body?: string;
 }
 
-export interface Put {
-    userId: number;
-    id?: number;
-    title: string;
-    body?: string;
-}
-
-
-export const newPostData: Post = {
+export const newPostData: PostData = {
     userId: 1,
     title: "My New Test Post",
     body: "This is the body of my new post"
 };
 
 
-export const newTodoData: Todo = {
+export const newTodoData: TodoRequestData = {
     userId: 1,
     title: "Learn Jest and Superagent",
     completed: false
 };
 
-export const postWithoutBody: Post = {
+export const postWithoutBody: PostData = {
     userId: 5,
     title: "No Body Post"
 };
 
-export const stringUserId: PostID = {
+export const requestWithInvalidUserId: PostDataID = {
     userId: "1",
     title: "My New Test Post",
     body: "This is the body of my new post"
 };
 
-export const updatedPostData: Post = {
+export const updatedPostData: PostData = {
     id: 1,
     userId: 1,
     title: "Updated Test Post",

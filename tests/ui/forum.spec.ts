@@ -1,5 +1,5 @@
 import { test, expect, Page } from '@playwright/test';
-import { PageFactory } from '../../factories/PageFactory';
+import { PageFactory } from './factories/PageFactory';
 
 test.describe('Onliner Forum tests', () => {
     let pages: PageFactory;
@@ -12,7 +12,6 @@ test.describe('Onliner Forum tests', () => {
 
     test('should navigate to "Форум" and verify page title', async () => {
         expect(pages.forumPage.page).toHaveURL(/forum\.onliner\.by/);
-        // expect(pages.forumPage.page).toHaveTitle('Форум onliner.by - Главная страница');
 
         const actualHeaderText = await pages.forumPage.getForumTitleText();
 
@@ -30,6 +29,5 @@ test.describe('Onliner Forum tests', () => {
         expect(await pages.forumPage.isMarketSection()).toBe(true);
         expect(await pages.forumPage.isDiscussionSection()).toBe(true);
         expect(await pages.forumPage.isAnyTopicVisible()).toBe(true);
-
     });
 });

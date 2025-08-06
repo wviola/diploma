@@ -1,5 +1,5 @@
 import { test, expect, Page, BrowserContext } from '@playwright/test';
-import { PageFactory } from '../../factories/PageFactory';
+import { PageFactory } from './factories/PageFactory';
 
 test.describe('Onliner ui elements tests', () => {
     let pages: PageFactory;
