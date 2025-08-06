@@ -1,5 +1,5 @@
 
-import { RegistrationForm } from '../src/models/registrationForm';
+import { RegistrationForm } from '../../src/models/registrationForm';
 
 export interface UserData {
     username?: string;

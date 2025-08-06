@@ -1,5 +1,5 @@
 import { RegistrationForm } from '../models/registrationForm';
-import applyUserData, { validUser, anotherValidUser, invalidUserCases } from '../../fixtures/userData';
+import applyUserData, { validUser, anotherValidUser, invalidUserCases } from '../.././tests/fixtures/userData';
 
 describe('Positive Cases', () => {
     let form: RegistrationForm;
@@ -40,7 +40,6 @@ describe('Positive Cases', () => {
         expect(form.getConfirmPassword()).toBe('Password123!');
     });
 
-    // Позитивные кейсы для setAge и getAge
     test('should correctly set and get a age 18', () => {
         form.setAge(18);
         expect(form.getAge()).toBe(18);
@@ -131,7 +130,6 @@ describe('Negative Cases', () => {
         expect(() => form.getUsername()).toThrow('Username must be between 3 and 20 characters');
     });
 
-    // Email
     test('getEmail should throw error for invalid email format', () => {
         form.setEmail('invalid-email.com');
         expect(() => form.getEmail()).toThrow('Invalid email format');
@@ -142,7 +140,6 @@ describe('Negative Cases', () => {
         expect(() => form.getEmail()).toThrow('Invalid email format');
     });
 
-    // Password
     test('getPassword should throw error for password too short', () => {
         form.setPassword('short');
         expect(() => form.getPassword()).toThrow('Password must be at least 8 characters long');
@@ -153,14 +150,12 @@ describe('Negative Cases', () => {
         expect(() => form.getPassword()).toThrow('Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character');
     });
 
-    // Confirm Password
     test('getConfirmPassword should throw error when passwords do not match', () => {
         form.setPassword('Password123!');
         form.setConfirmPassword('WrongPass123!');
         expect(() => form.getConfirmPassword()).toThrow('Passwords do not match');
     });
 
-    // Age
     test('getAge should throw error for age below 18', () => {
         form.setAge(17);
         expect(() => form.getAge()).toThrow('Age must be an integer number between 18 and 100');
@@ -171,36 +166,31 @@ describe('Negative Cases', () => {
         expect(() => form.getAge()).toThrow('Age must be an integer number between 18 and 100');
     });
 
-    // Accept Terms
     test('getAcceptTerms should throw error when terms are not accepted', () => {
         form.setAcceptTerms(false);
         expect(() => form.getAcceptTerms()).toThrow('You must accept the terms and conditions');
     });
 
-    // Country
     test('getCountry should throw error for empty country', () => {
         form.setCountry('');
         expect(() => form.getCountry()).toThrow('Country must be a non-empty string');
     });
 
-    // Phone Number
     test('getPhoneNumber should throw error for invalid phone number (too short)', () => {
         form.setPhoneNumber('123');
         expect(() => form.getPhoneNumber()).toThrow('Invalid phone number format');
     });
 
-    // Gender
     test('getGender should throw error for null gender', () => {
         form.setGender(null);
         expect(() => form.getGender()).toThrow('Gender must be specified as "male", "female", or "other"');
     });
 
     test('getGender should throw error for invalid gender value', () => {
-        form.setGender('unknown' as any); // Принудительно устанавливаем невалидное значение
+        form.setGender('unknown' as any);
         expect(() => form.getGender()).toThrow('Gender must be specified as "male", "female", or "other"');
     });
 
-    // Bio
     test('getBio should throw error for bio exceeding max length', () => {
         form.setBio('A'.repeat(501));
         expect(() => form.getBio()).toThrow('Bio cannot exceed 500 characters');
@@ -213,7 +203,6 @@ describe('Cases for valid form', () => {
     beforeEach(() => {
         form = new RegistrationForm();
     });
-
 
     test('isValid should return false if an invalid username is set', () => {
         applyUserData(form, validUser);

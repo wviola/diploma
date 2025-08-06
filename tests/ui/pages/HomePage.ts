@@ -138,5 +138,4 @@ export class HomePage {
     public async getHouseCategoriesLinks(): Promise<Locator> {
         return this.firstHomeCategory;
     }
-
 }
