@@ -108,13 +108,13 @@ test.describe('Onliner dropdown menu tests', () => {
         expect(carText).toContain('Автобарахолка');
     });
 
-    // test('should check a dropdown menu "Дома и квартиры"', async () => {
-    //     await pages.homePage.hoverOnHouseLink();
+    test('should check a dropdown menu "Дома и квартиры"', async () => {
+        await pages.homePage.hoverOnHouseLink();
 
-    //     const homeText = await pages.homePage.getHouseCategoriesText();
-    //     const homeLinks = await pages.homePage.getHouseCategoriesLinks();
-    //     await expect(homeLinks).toBeVisible();
-    //     await expect(homeLinks).toBeEnabled();
-    //     expect(homeText).toContain('Продажа');
-    // });
+        const homeText = await pages.homePage.getHouseCategoriesText();
+        const homeLinks = await pages.homePage.getHouseCategoriesLinks();
+        await expect(homeLinks).toBeVisible();
+        await expect(homeLinks).toBeEnabled();
+        expect(homeText).toContain('Продажа');
+    });
 });
